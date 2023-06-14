@@ -20,7 +20,7 @@ export default new Vuex.Store({
             state.basket = basket
         }
     },
-    
+
     actions: {
         /**
          * Импровизированный бэк с фильтрацией
