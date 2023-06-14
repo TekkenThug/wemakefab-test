@@ -11,18 +11,20 @@
                     <template #present>
                         <div class="main-page__count">
                             Bestsellers:
+                            <br>
+                            {{ products.length }}
                         </div>
                     </template>
 
                     <template #big>
                         <ProductCard
-                            v-if="bigCardProduct"
-                            v-bind="bigCardProduct"
+                            v-if="processedProducts.bigCard"
+                            v-bind="processedProducts.bigCard"
                         />
                     </template>
 
                     <ProductCard
-                        v-for="item in products"
+                        v-for="item in processedProducts.rest"
                         :key="item.id"
                         v-bind="item"
                     />
@@ -57,8 +59,11 @@ export default {
     },
 
     computed: {
-        bigCardProduct() {
-            return this.products.find(item => item.bigCard)
+        processedProducts() {
+            return {
+                bigCard: this.products.find(item => item.bigCard),
+                rest: this.products.filter(item => !item.bigCard)
+            }
         }
     },
 
