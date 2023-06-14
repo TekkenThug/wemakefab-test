@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "image": "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dwb7283e76/images/a_08/A06063C_A_08X1.jpg?sw=406",
+      "name": "Convers Chuck",
+      "price": 49.99,
+      "salePercent": 40,
+      "oldPrice": 59.99,
+      "bigCard": true,
+      "category": "sneaker",
+      "sale": "sale"
+    },
+    {
+      "id": 2,
+      "image": "https://fridaywear.ru/upload/resize_cache/webp/iblock/d71/58jspwoh7ox2r1vio6tp29f1jir195v7.webp",
+      "name": "Convers Chuck",
+      "price": 49.99,
+      "category": "sneaker",
+      "sale": "sale"
+    },
+    {
+      "id": 3,
+      "image": "https://fridaywear.ru/upload/resize_cache/webp/iblock/d71/58jspwoh7ox2r1vio6tp29f1jir195v7.webp",
+      "name": "Convers Chuck",
+      "price": 49.99,
+      "category": "sneaker",
+      "sale": "sale"
+    },
+    {
+      "id": 4,
+      "image": "https://fridaywear.ru/upload/resize_cache/webp/iblock/d71/58jspwoh7ox2r1vio6tp29f1jir195v7.webp",
+      "name": "Convers Chuck",
+      "price": 49.99,
+      "salePercent": 40,
+      "oldPrice": 69.99,
+      "category": "sneaker",
+      "sale": "common"
+    },
+    {
+      "id": 5,
+      "image": "https://fridaywear.ru/upload/resize_cache/webp/iblock/d71/58jspwoh7ox2r1vio6tp29f1jir195v7.webp",
+      "name": "Convers Chuck",
+      "price": 49.99,
+      "category": "sneaker",
+      "sale": "sale"
+    }
+  ]
+}
