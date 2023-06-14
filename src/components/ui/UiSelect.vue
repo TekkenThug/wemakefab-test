@@ -12,7 +12,6 @@
                     v-for="item in options"
                     :key="item.value"
                     :value="item.value"
-                    :selected="item.value === value"
                 >
                     {{ item.label }}
                 </option>
@@ -51,7 +50,7 @@ export default {
             type: Array,
             default: () => ([])
         }
-    }
+    },
 }
 </script>
 
