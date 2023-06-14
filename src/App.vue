@@ -17,18 +17,6 @@ export default {
         TheHeader,
         MainPage,
     },
-
-    data() {
-        return {
-            sneakers: [
-                {
-                    image: 'https://fridaywear.ru/upload/resize_cache/webp/iblock/d71/58jspwoh7ox2r1vio6tp29f1jir195v7.webp',
-                    name: 'Convers Chuck',
-                    price: 49.99,
-                }
-            ]
-        }
-    }
 }
 </script>
 
