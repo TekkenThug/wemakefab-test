@@ -1,5 +1,8 @@
 <template>
-    <button class="product-card-button">
+    <button
+        :class="['product-card-button', { 'product-card-button--white': isAdded }]"
+        @click="$emit('click')"
+    >
         <span>{{ text }}</span>
 
         <transition name="fade" mode="out-in">
@@ -61,5 +64,12 @@ export default {
     font-weight: 500;
     line-height: 22px;
     max-width: 335px;
+    border: 1px solid transparent;
+}
+
+.product-card-button--white {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
 }
 </style>
