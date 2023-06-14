@@ -60,5 +60,6 @@ export default {
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
+    max-width: 335px;
 }
 </style>
