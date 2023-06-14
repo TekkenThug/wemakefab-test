@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <ProductCardButton />
+        <ProductCardButton :is-added="isAdded" @click="processCartItem" />
     </div>
 </template>
 
@@ -41,6 +41,11 @@ export default {
     },
 
     props: {
+        id: {
+            type: Number,
+            required: null,
+        },
+
         image: {
             type: String,
             default: ''
@@ -65,6 +70,24 @@ export default {
             type: Number,
             default: 0,
         },
+    },
+
+    data() {
+        return {
+            isAdded: false,
+        }
+    },
+
+    async mounted() {
+        this.isAdded = await this.$store.dispatch('hasProductInBasket', this.id)
+    },
+
+    methods: {
+        async processCartItem() {
+            this.isAdded = await this.$store.dispatch('setBasketToItem', {
+                ...this.$props
+            })
+        }
     }
 }
 </script>
