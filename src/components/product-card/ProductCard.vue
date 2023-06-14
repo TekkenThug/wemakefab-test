@@ -43,7 +43,7 @@ export default {
     props: {
         id: {
             type: Number,
-            required: null,
+            required: true,
         },
 
         image: {
@@ -72,19 +72,15 @@ export default {
         },
     },
 
-    data() {
-        return {
-            isAdded: false,
+    computed: {
+        isAdded() {
+            return this.$store.state.basket.find(item => item.id === this.id)
         }
-    },
-
-    async mounted() {
-        this.isAdded = await this.$store.dispatch('hasProductInBasket', this.id)
     },
 
     methods: {
         async processCartItem() {
-            this.isAdded = await this.$store.dispatch('setBasketToItem', {
+            await this.$store.dispatch('setBasketToItem', {
                 ...this.$props
             })
         }
