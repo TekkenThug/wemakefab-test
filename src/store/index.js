@@ -12,13 +12,21 @@ export default new Vuex.Store({
     getters: {
         basketCount(state) {
             return state.basket.length;
+        },
+
+        orderTotal(state) {
+            return state.basket.reduce((prev, current) => prev += current.price, 0)
         }
     },
 
     mutations: {
         SET_BASKET(state, basket) {
             state.basket = basket
-        }
+        },
+
+        CLEAN_BASKET(state) {
+            state.basket = []
+        },
     },
 
     actions: {
@@ -74,6 +82,11 @@ export default new Vuex.Store({
 
                 return true;
             }
+        },
+
+        cleanBasket(context) {
+            localStorage.setItem('basket', JSON.stringify([]));
+            context.commit('CLEAN_BASKET');
         }
     },
     modules: {}
