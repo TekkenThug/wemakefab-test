@@ -2,22 +2,27 @@
     <div class="filter">
         <UiInput
             label="Search"
-            v-model="values.searchText"
+            v-model="values.search"
         />
 
         <UiSelect
-            v-model="values.category"
             :options="categories"
             label="Product category"
+            :value="values.category"
+            @change="value => values.category = value"
         />
 
         <UiSelect
-            v-model="values.sale"
             label="Sale"
             :options="sales"
+            :value="values.sale"
+            @change="value => values.sale = value"
         />
 
-        <button class="filter__apply-button">
+        <button
+            class="filter__apply-button"
+            @click="$emit('apply', values)"
+        >
             Apply
         </button>
     </div>
@@ -35,10 +40,14 @@ export default {
         UiSelect
     },
 
+    created() {
+        this.$emit('apply', this.values)
+    },
+
     data() {
         return {
             values: {
-                searchText: '',
+                search: '',
                 category: 'sneaker',
                 sale: 'sale',
             },
