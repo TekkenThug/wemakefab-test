@@ -28,7 +28,13 @@ export default {
 
     computed: {
         basketCount() {
-            return 'Basket'
+            const count = this.$store.getters.basketCount;
+
+            if (count) {
+                return `Basket(${this.$store.getters.basketCount})`
+            } else {
+                return 'Basket';
+            }
         }
     }
 }
