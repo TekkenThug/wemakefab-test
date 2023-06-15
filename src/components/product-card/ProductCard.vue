@@ -98,6 +98,7 @@ export default {
 .product-card__image-wrapper {
     position: relative;
     flex-grow: 1;
+    min-height: 400px;
 }
 
 .product-card__image-sale {
