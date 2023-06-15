@@ -74,7 +74,7 @@ export default {
 
     computed: {
         isAdded() {
-            return this.$store.state.basket.find(item => item.id === this.id)
+            return Boolean(this.$store.state.basket.find(item => item.id === this.id));
         }
     },
 
