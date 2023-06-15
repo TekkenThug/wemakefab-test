@@ -1,24 +1,14 @@
-# wemakefab
+# Wemakefab test
 
-## Project setup
+## Project setup with Docker
+```
+docker build -t wemakefab .
+docker run -it -p 8080:8080 wemakefab
+```
+
+## Project setup locally (Node 16 required)
+
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
