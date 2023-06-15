@@ -1,13 +1,16 @@
 <template>
     <div id="app" class="page">
-        <TheHeader class="page__header" />
+        <TheHeader />
 
         <MainPage />
+
+        <TheFooter />
     </div>
 </template>
 
 <script>
-import TheHeader from "@/components/header/TheHeader";
+import TheHeader from "@/components/common/header/TheHeader";
+import TheFooter from "@/components/common/footer/TheFooter";
 import MainPage from "@/pages/MainPage";
 
 export default {
@@ -15,6 +18,7 @@ export default {
 
     components: {
         TheHeader,
+        TheFooter,
         MainPage,
     },
 }
@@ -29,6 +33,10 @@ body {
     line-height: 19px;
     font-family: Inter, Arial, sans-serif;
     background-color: #ffffff;
+}
+
+body.locked {
+    overflow: hidden;
 }
 
 * {
@@ -47,14 +55,7 @@ select {
 
 a {
     text-decoration: none;
-}
-
-a:link {
-    color: black;
-}
-
-a:visited {
-    color: black;
+    color: inherit;
 }
 
 ul,
@@ -67,6 +68,7 @@ li {
 button {
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .container {
