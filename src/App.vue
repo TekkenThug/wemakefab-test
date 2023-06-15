@@ -36,6 +36,8 @@ body {
 }
 
 body.locked {
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
