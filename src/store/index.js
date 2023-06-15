@@ -14,8 +14,25 @@ export default new Vuex.Store({
             return state.basket.length;
         },
 
-        orderTotal(state) {
-            return state.basket.reduce((prev, current) => prev += current.price, 0)
+        subtotalPrice(state) {
+            return state.basket.reduce((prev, current) => {
+                prev += (current.oldPrice || current.price)
+                return prev
+            }, 0);
+        },
+
+        salePrice(state) {
+            return state.basket.reduce((prev, current) => {
+                if (current.oldPrice) {
+                    prev += (current.oldPrice - current.price)
+                }
+
+                return prev
+            }, 0)
+        },
+
+        orderTotal(state, getters) {
+            return getters.subtotalPrice - getters.salePrice;
         }
     },
 
