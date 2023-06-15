@@ -34,7 +34,6 @@
 <script>
 import HeaderBasketPopup from "@/components/common/header/HeaderBasketPopup";
 import TheLogo from "@/components/common/logo/TheLogo";
-import {lockBody, unlockBody} from "@/utils/dom";
 
 export default {
     name: "TheHeader",
@@ -65,12 +64,6 @@ export default {
     methods: {
         toggleBasketPopup() {
             this.isOpenedBasket = !this.isOpenedBasket;
-
-            if (this.isOpenedBasket) {
-                lockBody();
-            } else {
-                unlockBody();
-            }
         }
     }
 }
