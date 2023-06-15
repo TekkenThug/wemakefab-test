@@ -2,7 +2,7 @@
     <div id="app" class="page">
         <TheHeader />
 
-        <MainPage />
+        <MainPage class="page__content" />
 
         <TheFooter />
     </div>
@@ -69,6 +69,16 @@ button {
     border: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page__content {
+    flex-grow: 1;
 }
 
 .container {
