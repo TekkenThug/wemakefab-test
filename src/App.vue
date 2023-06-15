@@ -71,6 +71,9 @@ button {
     border: none;
     cursor: pointer;
     background-color: transparent;
+    padding: 0;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 .page {
