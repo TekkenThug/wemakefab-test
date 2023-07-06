@@ -1,5 +1,7 @@
 # Wemakefab test
 
+Тестовое задание в компанию Wemakefab, на позицию Middle Frontend
+
 ## Project setup with Docker
 ```
 docker build -t wemakefab .
